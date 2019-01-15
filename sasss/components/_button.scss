@@ -21,8 +21,17 @@
         &::after {
             background-color: $color-white;
         }
-    }
-    
+    } 
+
+    &--green {
+        background-color:$color-primary ;
+        color:$color-white;
+
+
+        &::after {
+            background-color: $color-white;
+        }
+    } 
     
     &:hover {
         transform: translateY(-3px);
@@ -32,15 +41,13 @@
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
-    }
-    
+    } 
     
     &:active {
         transform: translateY(1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
-    
-    
+       
     &::after {
         content:"";
         display:inline-block;
@@ -59,7 +66,6 @@
         animation-fill-mode: backwards;
      }
 }
-
 
 .btn-text {
     &:link,
