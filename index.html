@@ -65,9 +65,34 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+
+                            <img srcset="img/nat-1.jpg 300w img/nat-1-large.jpg 1000w" 
+                                sizes="(max-width 56.25em) 20vw, (max-width 37.5em) 30vw, 300px" 
+                                alt="Photo 1" 
+                                class="composition__photo composition__photo--p1"
+                                src="img/nat-1-large.jpg">
+                                <!--for resolution and density switching
+                                mg/nat-1.jpg 300w img/nat-1-large.jpg 1000w _> Is to avoid the browser to download the image to get access to this info
+                                the sizes element gives indication of the width of the image at different wiewports width and display resolution
+                                for example 900px breakpooint the image = 171/900 = 20%
+                                
+                                we put the source attrubute in case the browser can read srcset-->
+
+                            <img srcset="img/nat-2.jpg 300w img/nat-2-large.jpg 1000w" 
+                                sizes="(max-width 56.25em) 20vw, (max-width 37.5em) 30vw, 300px" 
+                                alt="Photo 2" 
+                                class="composition__photo composition__photo--p2"
+                                src="img/nat-2-large.jpg">
+                                
+                            <img srcset="img/nat-3.jpg 300w img/nat-3-large.jpg 1000w" 
+                                sizes="(max-width 56.25em) 20vw, (max-width 37.5em) 30vw, 300px" 
+                                alt="Photo 3" 
+                                class="composition__photo composition__photo--p3"
+                                src="img/nat-3-large.jpg">
+
+                               <!--<img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">-->
                         </div>
                     </div>
                 </div>
@@ -251,7 +276,12 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img src="img/nat-8.jpg" alt="person on a tour" class="story__img">
+                            <img srcset="img/nat-8-small.jpg 1000w img/nat-8.jpg 2000w" 
+                            sizes="(max-width 900px) 29vw, (max-width 600px) 42vw, 300px" 
+                            alt="person on a tour"
+                            class="story__img"
+                            src="img/nat-8.jpg">
+                        <!--img src="img/nat-8.jpg" alt="person on a tour" class="story__img">-->
                         <figcaption class="story__caption">Mary Smith</figcaption>
 
                     </figure>
@@ -265,7 +295,12 @@
             <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="img/nat-9.jpg" alt="person on a tour" class="story__img">
+                            <img srcset="img/nat-9-small.jpg 1000w img/nat-9.jpg 2000w" 
+                                sizes="(max-width 900px) 29vw, (max-width 600px) 42vw, 300px" 
+                                alt="person on a tour"
+                                class="story__img"
+                                src="img/nat-9.jpg">
+                            <!--img src="img/nat-9.jpg" alt="person on a tour" class="story__img"-->
                             <figcaption class="story__caption">Ben Carter</figcaption>
     
                         </figure>
@@ -329,7 +364,12 @@
     </main> 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                    media="(max-width:37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="full logo" src="img/logo-green-2x.png" >
+            </picture>
+            
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -353,6 +393,7 @@
     <div class="popup" id="popup">
         <div class="popup__content">
             <div class="popup__left">
+ 
                 <img src="img/nat-8.jpg" alt="tour photo" class="popup__img">
                 <img src="img/nat-9.jpg" alt="tour photo" class="popup__img">
             </div>
