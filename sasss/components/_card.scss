@@ -12,6 +12,7 @@
         top:0;
         left: 0;
         width: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden; //to avoid the second background to overlap and hide the rounded corners
@@ -162,7 +163,11 @@
 
     }
 
-    @include respond(tab-port) {
+    //@include respond(tab-port) 
+    ///below the second condition is to exlude the flip if we can't hover on a device
+    @media only screen and (max-width: 56.25em),
+        only screen and (hover: none) {
+
         height: auto;
         border-radius: 3px;
         background-color: $color-white;
